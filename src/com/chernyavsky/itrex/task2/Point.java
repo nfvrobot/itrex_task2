@@ -9,9 +9,9 @@ import lombok.ToString;
 @AllArgsConstructor
 public class Point {
 
-    private int x;
-    private int y;
-    private int z;
-    private Point previous;
+    private int h;
+    private int m;
+    private int n;
+    private Point previousPoint;
 
 }
