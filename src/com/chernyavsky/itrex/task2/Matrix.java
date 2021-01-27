@@ -13,17 +13,17 @@ public class Matrix {
     }
 
     public static String[][][] parseAllMatrix(List<String> list, int n, int m) {
-        final String[][][] all = new String[n][][];
+        String[][][] all = new String[n][][];
         for (int i = 0; i < n; i++) {
             all[i] = parseMatrix(list, i, m);
         }
         return all;
     }
 
-    private static String[][] parseMatrix(List<String> list, int matrixNumber, int m) {
-        final String[][] matrix = new String[m][];
+    private static String[][] parseMatrix(List<String> list, int h, int m) {
+        String[][] matrix = new String[m][];
         for (int i = 0; i < m; i++) {
-            matrix[i] = parseLine(list.get(matrixNumber * m + i));
+            matrix[i] = parseLine(list.get(h * m + i));
         }
         return matrix;
     }
