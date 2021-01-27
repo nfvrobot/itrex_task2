@@ -12,7 +12,7 @@ public class Matrix {
         return Matrix.parseAllMatrix(list, n_column_count, m_rows_count);
     }
 
-    public static String[][][] parseAllMatrix(final List<String> list, int n, int m) {
+    public static String[][][] parseAllMatrix(List<String> list, int n, int m) {
         final String[][][] all = new String[n][][];
         for (int i = 0; i < n; i++) {
             all[i] = parseMatrix(list, i, m);
