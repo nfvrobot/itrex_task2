@@ -1,7 +1,5 @@
 package com.chernyavsky.itrex.task2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Matrix {
@@ -12,10 +10,10 @@ public class Matrix {
         int h_lvl_count = Integer.parseInt(array[0]);
         int m_rows_count = Integer.parseInt(array[1]);
         int n_column_count = Integer.parseInt(array[2]);
-        return Matrix.parseAllMatrixs(list, n_column_count, m_rows_count);
+        return Matrix.parseAllMatrix(list, n_column_count, m_rows_count);
     }
 
-    public static String[][][] parseAllMatrixs(final List<String> list, int n, int m) {
+    public static String[][][] parseAllMatrix(final List<String> list, int n, int m) {
         final String[][][] all = new String[n][][];
         for (int i = 0; i < n; i++) {
             all[i] = parseMatrix(list, i, m);

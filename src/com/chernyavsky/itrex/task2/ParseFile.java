@@ -14,22 +14,16 @@ public class ParseFile {
 
     public static String[] searchMatrixHMN() {
         List<String> tempList = new ArrayList<>();
-        String[] matrixPoints = new String[3];
 
         try (Stream<String> stream = Files.lines(Paths.get(FILENAME))) {
             tempList = stream
                     .limit(1L)
                     .filter(s -> !s.isEmpty())
                     .collect(Collectors.toList());
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        for (String s : tempList) {
-            matrixPoints = s.split(" ");
-        }
-        return matrixPoints;
+        return tempList.get(0).split(" ");
     }
 
     public static List<String> matrixInfo() {
