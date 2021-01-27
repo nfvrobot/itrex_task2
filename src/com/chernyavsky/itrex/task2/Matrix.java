@@ -7,7 +7,6 @@ public class Matrix {
     public static String[][][] buildAndInitializeMatrix() {
         List<String> list = ParseFile.matrixInfo();
         String[] array = ParseFile.searchMatrixHMN();
-        int h_lvl_count = Integer.parseInt(array[0]);
         int m_rows_count = Integer.parseInt(array[1]);
         int n_column_count = Integer.parseInt(array[2]);
         return Matrix.parseAllMatrix(list, n_column_count, m_rows_count);
