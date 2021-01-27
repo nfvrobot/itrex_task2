@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class ChasingPrincess {
 
-    private static final Queue<Point> pointQueue = new LinkedList<>();
+    private static final Queue<Point> POINT_QUEUE = new LinkedList<>();
     private static final ArrayList<Point> POINT_ARRAY_LIST = new ArrayList<>();
     private static final String[][][] MATRIX = Matrix.buildAndInitializeMatrix();
     private static final String[] MATRIX_INFO = ParseFile.searchMatrixHMN();
@@ -45,11 +45,11 @@ public class ChasingPrincess {
     public static int catchThePrincess() {
         createList();
         Point point = getPointFromList(PRINCE);
-        pointQueue.add(point);
+        POINT_QUEUE.add(point);
         assert point != null;
         point.setVisited(true);
-        while (!pointQueue.isEmpty()) {
-            Point p = pointQueue.poll();
+        while (!POINT_QUEUE.isEmpty()) {
+            Point p = POINT_QUEUE.poll();
             if (!p.getValue().equals("2")) {
                 if (!p.getPointsAround().isEmpty()) {
                     ArrayList<Point> temp = p.getPointsAround();
@@ -59,7 +59,7 @@ public class ChasingPrincess {
                         if (!neighbor.isVisited()) {
                             neighbor.setVisited(true);
                             neighbor.setSteps(p.getSteps() + 1);
-                            pointQueue.add(neighbor);
+                            POINT_QUEUE.add(neighbor);
                         }
                     }
                 }
