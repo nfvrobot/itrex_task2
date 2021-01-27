@@ -23,9 +23,9 @@ public class ChasingPrincess {
 
             Point activeP = pointQueue.remove();
 
-            if (matrix[activeP.getH()][activeP.getM()][activeP.getN()].equals("2")) {
-                return activeP;
-            }
+//            if (matrix[activeP.getH()][activeP.getM()][activeP.getN()] == '2') {
+//                return activeP;
+//            }
 
         }
         return null;
@@ -34,8 +34,8 @@ public class ChasingPrincess {
     private static boolean freePoint(int x, int y, int z) {
         return (x >= 0 && x < h_lvl_count)
                 && (y >= 0 && y < m_rows_count)
-                && (z >= 0 && z < n_columns_count)
-                && ((matrix[x][y][z].equals(".")) || (matrix[x][y][z].equals("2")));
+                && (z >= 0 && z < n_columns_count);
+//                && ((matrix[x][y][z] == '.' || (matrix[x][y][z] == '2')));
     }
 
     public static String start() {

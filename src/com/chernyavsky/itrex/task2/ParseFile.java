@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 public class ParseFile {
 
-    public static final String FILENAME = "src/INFO.txt";
+    public static final String FILENAME = "resources/INFO.txt";
 
     public static String[] searchMatrixHMN() {
         List<String> tempList = new ArrayList<>();
