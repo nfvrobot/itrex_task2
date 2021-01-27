@@ -35,5 +35,4 @@ public class Matrix {
         }
         return line;
     }
-
 }
